@@ -1,0 +1,10 @@
+@startuml Book Shelf
+[Users] ..> [Home] : use
+[Users] ..> [My Profile] : use
+[Users] ..> [Add Admins] : use
+[Users] ..> [My reviews] : use
+[Users] ..> [Add reviews] : use
+[Users] ..> [Logout] : use
+[Customers]..>[Home] : use
+@enduml
+

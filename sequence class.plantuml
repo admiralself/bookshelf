@@ -1,0 +1,71 @@
+@startuml Book Shelf
+
+class users {
+    id: Guid
+    email: Sting
+    password: Sting
+    name:  Sting
+    lastname: Sting
+    role: Sting
+    token: Sting
+}
+
+class books {
+    name: Sting
+    author: Sting
+    review: Sting
+    pages:  Sting
+    rating: Sting
+    price: Sting
+    ownerId: Sting
+}
+
+
+
+class Home_reviews {
+    review: Sting
+
+}
+
+class My_Profile {
+    email: Sting
+    password: Sting
+    name:  Sting
+}
+
+class Admins {
+    id: Guid
+    name:  Sting
+    lastname: Sting
+    email: Sting
+    password: Sting
+
+}
+
+
+class My_reviews {
+      name: Sting
+    author: Sting
+    review: Sting
+
+}
+
+class Add_reviews {
+
+   name: Sting
+    author: Sting
+    review: Sting
+    pages:  Sting
+    rating: Sting
+    price: Sting
+}
+
+books "n" *-- "1" users
+Home_reviews o-- books
+My_Profile o-- users
+Add_reviews o-- books
+My_reviews o-- books
+Admins  o-- users
+
+@enduml
+
